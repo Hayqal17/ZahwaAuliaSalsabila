@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sayangku 🎂💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@300;400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --pink: #ff85a1;
+    --deep-pink: #e5547a;
+    --blush: #ffc2d1;
+    --lavender: #c9b8f5;
+    --cream: #fff9f5;
+    --soft-purple: #b39ddb;
+    --gold: #ffd700;
+    --dark: #3d2040;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+
+  /* ---- STARS BACKGROUND ---- */
+  .stars {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    background: var(--pink);
+    border-radius: 50%;
+    animation: twinkle 3s infinite alternate;
+  }
+  @keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.3); }
+  }
+
+  /* ---- HEARTS FLOAT ---- */
+  .hearts-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .floating-heart {
+    position: absolute;
+    bottom: -50px;
+    font-size: 1.5rem;
+    animation: floatUp linear infinite;
+    opacity: 0.6;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* ---- NAVBAR ---- */
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid var(--blush);
+    padding: 0 20px;
+  }
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .nav-logo {
+    font-family: 'Pacifico', cursive;
+    color: var(--deep-pink);
+    font-size: 1.3rem;
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .nav-links button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dark);
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+  .nav-links button:hover, .nav-links button.active {
+    background: var(--pink);
+    color: white;
+  }
+
+  /* ---- PAGES ---- */
+  .page {
+    display: none;
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .page.active { display: flex; flex-direction: column; align-items: center; }
+
+  .container {
+    max-width: 750px;
+    width: 100%;
+  }
+
+  /* ---- CARDS ---- */
+  .card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    margin: 20px 0;
+    box-shadow: 0 8px 32px rgba(255,133,161,0.18);
+    border: 2px solid var(--blush);
+    animation: popIn 0.5s ease;
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--deep-pink);
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 1.2;
+    text-shadow: 2px 2px 0 var(--blush);
+  }
+  h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--deep-pink);
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  h3 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--soft-purple);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #5a4060;
+  }
+
+  /* ---- HOME PAGE ---- */
+  .birthday-hero {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  .cake-emoji {
+    font-size: 6rem;
+    animation: bounce 1.5s infinite;
+    display: block;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  .subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--soft-purple);
+    margin: 10px 0;
+  }
+  .distance-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(255,133,161,0.4);
+  }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--pink), var(--deep-pink));
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 6px 20px rgba(229,84,122,0.35);
+    transition: all 0.3s;
+    margin: 8px;
+    text-decoration: none;
+  }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(229,84,122,0.45); }
+  .btn-outline {
+    background: none;
+    border: 2px solid var(--pink);
+    color: var(--pink);
+    box-shadow: none;
+  }
+  .btn-outline:hover { background: var(--pink); color: white; }
+
+  /* ---- COUNTDOWN ---- */
+  .countdown-section {
+    text-align: center;
+  }
+  .countdown-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .count-box {
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    border-radius: 20px;
+    padding: 20px 24px;
+    min-width: 80px;
+    color: white;
+    box-shadow: 0 6px 20px rgba(255,133,161,0.4);
+  }
+  .count-num {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+  }
+  .count-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ---- LETTER PAGE ---- */
+  .letter-box {
+    background: #fffbf0;
+    border: 2px dashed var(--blush);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #5a3060;
+  }
+  .letter-box::before {
+    content: '💌';
+    font-size: 3rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .stamp {
+    float: right;
+    font-size: 3rem;
+    margin: 0 0 10px 10px;
+  }
+
+  /* ---- MEMORIES ---- */
+  .memory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .memory-card {
+    background: linear-gradient(135deg, var(--blush), var(--lavender));
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(255,133,161,0.2);
+  }
+  .memory-card:hover { transform: scale(1.05) rotate(-1deg); box-shadow: 0 8px 25px rgba(255,133,161,0.4); }
+  .memory-icon { font-size: 2.5rem; display: block; margin-bottom: 8px; }
+  .memory-title { font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: var(--dark); font-weight: 700; }
+  .memory-text { font-size: 0.85rem; color: #6a4070; margin-top: 6px; }
+
+  /* ---- REASONS ---- */
+  .reason-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(255,194,209,0.3), rgba(201,184,245,0.3));
+    border-radius: 16px;
+    margin: 12px 0;
+    border-left: 4px solid var(--pink);
+    animation: slideIn 0.4s ease;
+  }
+  @keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  .reason-num {
+    font-family: 'Pacifico', cursive;
+    color: var(--pink);
+    font-size: 1.8rem;
+    min-width: 40px;
+  }
+
+  /* ---- MUSIC ---- */
+  .playlist {
+    list-style: none;
+  }
+  .song-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(255,194,209,0.2);
+    border: 1px solid var(--blush);
+  }
+  .song-item:hover { background: rgba(255,133,161,0.15); transform: translateX(6px); }
+  .song-icon { font-size: 1.8rem; }
+  .song-info { flex: 1; }
+  .song-title { font-weight: 700; color: var(--dark); }
+  .song-artist { font-size: 0.85rem; color: #8a6090; }
+  .song-mood { font-size: 0.75rem; background: var(--blush); padding: 2px 10px; border-radius: 20px; color: var(--deep-pink); font-weight: 700; }
+
+  /* ---- GIFT PAGE ---- */
+  .gift-wrap {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .gift-box {
+    display: inline-block;
+    font-size: 8rem;
+    cursor: pointer;
+    animation: wiggle 2s infinite;
+    transition: all 0.3s;
+  }
+  @keyframes wiggle {
+    0%,100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+  }
+  .gift-box:hover { transform: scale(1.1); animation: none; }
+  .gift-msg {
+    display: none;
+    animation: popIn 0.5s ease;
+  }
+  .gift-msg.show { display: block; }
+  .wish-bubble {
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    border-radius: 20px;
+    padding: 24px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(255,133,161,0.4);
+    margin: 20px 0;
+  }
+
+  /* ---- PROMISE PAGE ---- */
+  .promise-card {
+    background: linear-gradient(160deg, #fff9f5, #fce4ec);
+    border: 2px solid var(--blush);
+    border-radius: 24px;
+    padding: 30px;
+    margin: 12px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .promise-card::after {
+    content: '🌸';
+    position: absolute;
+    right: 16px;
+    bottom: 10px;
+    font-size: 2rem;
+    opacity: 0.3;
+  }
+  .promise-icon { font-size: 2rem; margin-bottom: 8px; }
+
+  /* ---- LDR PAGE ---- */
+  .distance-visual {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255,133,161,0.1), rgba(201,184,245,0.1));
+    border-radius: 24px;
+    margin: 16px 0;
+    border: 2px solid var(--blush);
+  }
+  .map-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    margin: 16px 0;
+  }
+  .ldr-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    background: white;
+    border-radius: 16px;
+    margin: 10px 0;
+    box-shadow: 0 4px 15px rgba(255,133,161,0.1);
+    border-left: 4px solid var(--lavender);
+  }
+  .tip-icon { font-size: 1.5rem; }
+
+  /* ---- FIREWORKS ---- */
+  .firework {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    font-size: 2rem;
+    animation: explode 1s ease forwards;
+  }
+  @keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(2); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+  }
+
+  /* ---- MUSIC NOTE FLOAT ---- */
+  .music-float {
+    position: fixed;
+    pointer-events: none;
+    z-index: 500;
+    font-size: 1.5rem;
+    animation: musicFloat 4s ease forwards;
+    opacity: 0;
+  }
+  @keyframes musicFloat {
+    0% { transform: translate(0,0) rotate(0deg); opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { transform: translate(var(--dx), -150px) rotate(var(--rot)); opacity: 0; }
+  }
+
+  /* ---- AGE DISPLAY ---- */
+  .age-display {
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    color: var(--pink);
+    text-shadow: 3px 3px 0 var(--blush);
+    line-height: 1;
+    display: block;
+    text-align: center;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* ---- QUOTE CAROUSEL ---- */
+  .quote-carousel {
+    text-align: center;
+    background: linear-gradient(135deg, var(--pink), var(--lavender));
+    border-radius: 24px;
+    padding: 36px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .quote-carousel::before {
+    content: '"';
+    font-family: 'Pacifico', cursive;
+    font-size: 10rem;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    opacity: 0.2;
+    line-height: 1;
+  }
+  .quote-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+  }
+  .quote-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .quote-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+  }
+  .quote-dot.active { background: white; transform: scale(1.3); }
+
+  /* RESPONSIVE */
+  @media(max-width:600px) {
+    h1 { font-size: 2.5rem; }
+    .nav-links button { font-size: 0.72rem; padding: 5px 7px; }
+    .card { padding: 20px; }
+    .letter-box { padding: 30px 20px; font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+<!-- Floating Hearts -->
+<div class="hearts-bg" id="hearts"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">💕 For You</div>
+    <div class="nav-links">
+      <button onclick="showPage('home')" class="active" id="btn-home">🏠 Home</button>
+      <button onclick="showPage('letter')" id="btn-letter">💌 Surat</button>
+      <button onclick="showPage('reasons')" id="btn-reasons">💖 Alasan</button>
+      <button onclick="showPage('ldr')" id="btn-ldr">✈️ LDR</button>
+      <button onclick="showPage('music')" id="btn-music">🎵 Musik</button>
+      <button onclick="showPage('gift')" id="btn-gift">🎁 Hadiah</button>
+      <button onclick="showPage('promise')" id="btn-promise">🌙 Janji</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ======== HOME PAGE ======== -->
+<div class="page active" id="page-home">
+  <div class="container">
+    <div class="birthday-hero">
+      <span class="cake-emoji">🎂</span>
+      <h1>Selamat Ulang Tahun<br>Sayang~ku! 🌸</h1>
+      <p class="subtitle">Hari ini adalah hari paling spesial...</p>
+      <div class="distance-badge">✈️ Jarak Boleh Jauh, Hatiku Selalu di Sisimu 💕</div>
+    </div>
+
+    <div class="card">
+      <div class="countdown-section">
+        <h2 id="age-journey-title">🎂 Perjalanan Tahun Ini</h2>
+        <p style="text-align:center;margin-bottom:20px;color:#8a6090;">Kamu sudah menempuh perjalanan setahun penuh dan kini resmi <strong style="color:var(--deep-pink)" id="age-now-text">19 tahun</strong>! 🎉</p>
+
+        <!-- Progress Bar dinamis -->
+        <div style="position:relative;margin:16px 0 8px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--soft-purple);" id="age-prev-label">18 🌱</span>
+            <span style="font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--deep-pink);" id="age-next-label">19 🌸</span>
+          </div>
+          <div style="height:26px;background:rgba(255,194,209,0.3);border-radius:50px;overflow:hidden;border:2px solid var(--blush);">
+            <div id="progress-bar" style="height:100%;width:0%;background:linear-gradient(90deg,var(--pink),var(--lavender));border-radius:50px;transition:width 2s ease;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:0.75rem;color:white;font-weight:800;letter-spacing:1px;" id="progress-text"></span>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:10px;">
+            <span id="progress-status" style="background:linear-gradient(135deg,var(--pink),var(--lavender));color:white;padding:6px 18px;border-radius:50px;font-size:0.85rem;font-weight:700;">✅ 365/365 hari — SELESAI! Kamu keren! 🥳</span>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px;">
+          <div style="background:linear-gradient(135deg,rgba(255,194,209,0.4),rgba(201,184,245,0.4));border-radius:16px;padding:14px 18px;text-align:center;flex:1;min-width:90px;">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--deep-pink);font-weight:700;" id="stat-days">365</div>
+            <div style="font-size:0.75rem;color:#8a6090;font-weight:700;">Hari Dilalui</div>
+          </div>
+          <div style="background:linear-gradient(135deg,rgba(255,194,209,0.4),rgba(201,184,245,0.4));border-radius:16px;padding:14px 18px;text-align:center;flex:1;min-width:90px;">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--deep-pink);font-weight:700;" id="stat-hours">8.760</div>
+            <div style="font-size:0.75rem;color:#8a6090;font-weight:700;">Jam Bersinar</div>
+          </div>
+          <div style="background:linear-gradient(135deg,rgba(255,194,209,0.4),rgba(201,184,245,0.4));border-radius:16px;padding:14px 18px;text-align:center;flex:1;min-width:90px;">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--deep-pink);font-weight:700;">∞</div>
+            <div style="font-size:0.75rem;color:#8a6090;font-weight:700;">Cintaku</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:16px;">
+          <span class="age-display" id="age-display">19 🎉</span>
+          <p style="margin-top:8px;font-size:0.9rem;color:#8a6090;">Dan setiap tahunnya kamu semakin cantik, semakin kuat, dan semakin membuatku jatuh cinta lagi 🥺💗</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 id="cd-title">⏰ Sisa Hari Spesialmu</h2>
+      <p style="margin-bottom:16px;" id="cd-desc">Rayakan terus sampai tengah malam ya! 🥳</p>
+      <div class="countdown-grid" id="countdown">
+        <div class="count-box" id="cd-box-days" style="display:none;"><span class="count-num" id="cd-days">00</span><span class="count-label">Hari</span></div>
+        <div class="count-box"><span class="count-num" id="cd-hours">00</span><span class="count-label">Jam</span></div>
+        <div class="count-box"><span class="count-num" id="cd-min">00</span><span class="count-label">Menit</span></div>
+        <div class="count-box"><span class="count-num" id="cd-sec">00</span><span class="count-label">Detik</span></div>
+      </div>
+      <div style="text-align:center;margin-top:14px;">
+        <span id="cd-badge" style="background:linear-gradient(135deg,var(--pink),var(--lavender));color:white;padding:6px 18px;border-radius:50px;font-size:0.85rem;font-weight:700;"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="quote-carousel" id="quote-carousel">
+        <div class="quote-text" id="quote-text">"Jarak hanya angka, tapi rasa sayangku tidak pernah bisa diukur jarak..."</div>
+        <div class="quote-nav" id="quote-nav"></div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:10px 0;">
+      <button class="btn" onclick="launchFireworks()">🎆 Rayakan Sekarang!</button>
+      <button class="btn btn-outline" onclick="showPage('letter')">💌 Baca Suratku</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======== LETTER PAGE ======== -->
+<div class="page" id="page-letter">
+  <div class="container">
+    <h1>💌 Surat Untukmu</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">Dari hati yang paling dalam, untuk hati yang paling aku cintai</p>
+
+    <div class="card">
+      <div class="letter-box">
+        <span class="stamp">💌</span>
+        <p><strong>Untuk Sayangku yang paling cantik,</strong></p>
+        <br>
+        <p>Hari ini, di hari yang paling spesial ini, aku ingin kamu tahu betapa bersyukurnya aku bisa mengenal kamu.</p>
+        <br>
+        <p>Jarak yang memisahkan kita mungkin membuat aku tidak bisa memelukmu hari ini, tidak bisa menyalakan lilin kue ulang tahunmu secara langsung... tapi percayalah, hatiku selalu ada di sisimu, setiap saat, setiap detik.</p>
+        <br>
+        <p>Kamu adalah wanita paling luar biasa yang pernah aku kenal. Kamu kuat, kamu tegar, kamu menjalani LDR ini dengan penuh kesetiaan dan kasih sayang yang membuatku takjub setiap harinya.</p>
+        <br>
+        <p>Di hari ulang tahunmu ini, aku berharap bisa memberikan semua kebahagiaan yang kamu layak dapatkan. Semoga tahun ini membawa banyak kebaikan, banyak senyuman, dan semoga... kita segera bisa bersama.</p>
+        <br>
+        <p>Selamat ulang tahun, sayangku. Aku cinta kamu, dulu, sekarang, dan selalu. 🌹</p>
+        <br>
+        <p style="text-align:right;"><strong>Dengan cinta penuh,<br>Kekasihmu yang selalu merindukanmu 💕</strong></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🌈 P.S. Untukmu</h2>
+      <div style="background:linear-gradient(135deg,rgba(255,194,209,0.3),rgba(201,184,245,0.3));border-radius:16px;padding:20px;">
+        <p style="font-family:'Dancing Script',cursive;font-size:1.2rem;color:#5a3060;">
+          "Setiap malam aku melihat bintang yang sama denganmu. Di situlah aku merasa dekat denganmu, meski ribuan kilometer memisahkan kita. Kamu adalah bintang paling terang di langitku."
+        </p>
+        <p style="text-align:right;margin-top:12px;color:var(--pink);font-weight:700;">— Kekasihmu 🌟</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ======== REASONS PAGE ======== -->
+<div class="page" id="page-reasons">
+  <div class="container">
+    <h1>💖 Alasan Aku Cinta Kamu</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">Ini hanya sebagian kecil dari seribu alasan...</p>
+
+    <div id="reasons-list">
+      <div class="reason-item"><div class="reason-num">01</div><div><h3>Senyummu</h3><p>Senyummu adalah hal pertama yang membuatku jatuh cinta. Bahkan lewat layar pun, senyummu bisa menghangatkan hariku yang paling dingin sekalipun. 😊</p></div></div>
+      <div class="reason-item"><div class="reason-num">02</div><div><h3>Kekuatanmu</h3><p>Kamu menjalani LDR ini dengan begitu kuat dan setia. Itu butuh keberanian dan cinta yang luar biasa, dan aku sangat menghargainya dari kamu. 💪</p></div></div>
+      <div class="reason-item"><div class="reason-num">03</div><div><h3>Cara Kamu Peduli</h3><p>Kamu selalu ingat detail-detail kecil tentang aku. Kamu selalu tanya kabar, selalu ada saat aku butuh. Perhatianmu itu yang membuatku selalu rindu. 🥺</p></div></div>
+      <div class="reason-item"><div class="reason-num">04</div><div><h3>Tawamu</h3><p>Suara tawamu adalah musik terindah yang pernah aku dengar. Setiap kali kita ketawa bareng di video call, itu adalah momen paling bahagiaku. 😂💕</p></div></div>
+      <div class="reason-item"><div class="reason-num">05</div><div><h3>Kesetiaanmu</h3><p>Meski jarak memisahkan, kamu tidak pernah goyah. Kepercayaan dan kesetiaanmu adalah fondasi cinta kita yang paling kuat. 🏰</p></div></div>
+      <div class="reason-item"><div class="reason-num">06</div><div><h3>Kamu apa adanya</h3><p>Kamu tidak pernah berpura-pura. Kamu selalu jadi dirimu sendiri, dan itu adalah hal paling indah yang pernah aku lihat dari seseorang. ✨</p></div></div>
+      <div class="reason-item"><div class="reason-num">07</div><div><h3>Impian-impianmu</h3><p>Cara kamu bercerita tentang mimpi dan cita-citamu dengan bersemangat... itu menular, dan aku mencintai semangat itu di dirimu. 🌟</p></div></div>
+      <div class="reason-item"><div class="reason-num">08</div><div><h3>Kamu Memilihku</h3><p>Dari semua orang di dunia ini, kamu memilih untuk mencintaiku. Dan itu adalah karunia paling berharga yang pernah aku terima. 🙏💖</p></div></div>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <p style="font-family:'Dancing Script',cursive;font-size:1.4rem;color:var(--deep-pink);">
+        "Dan masih ada seribu alasan lagi yang tidak muat aku tulis di sini... 💗"
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ======== LDR PAGE ======== -->
+<div class="page" id="page-ldr">
+  <div class="container">
+    <h1>✈️ Cinta Jarak Jauh Kita</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">LDR bukan halangan, LDR adalah bukti cinta kita serius 💪</p>
+
+    <div class="card">
+      <div class="distance-visual">
+        <h3>📍 Jarak Kita Saat Ini...</h3>
+
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:20px 0;flex-wrap:wrap;">
+          <!-- Dia - Solo -->
+          <div style="background:white;border-radius:20px;padding:18px 24px;box-shadow:0 6px 20px rgba(255,133,161,0.25);text-align:center;min-width:130px;">
+            <div style="font-size:2.2rem;">👧</div>
+            <div style="font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--deep-pink);font-weight:700;">Kamu</div>
+            <div style="font-size:0.85rem;font-weight:700;color:#6a4070;margin-top:4px;">📍 Solo</div>
+            <div style="font-size:0.75rem;color:#8a6090;">Jawa Tengah</div>
+          </div>
+
+          <!-- Garis jarak -->
+          <div style="text-align:center;flex:1;min-width:120px;">
+            <div style="font-size:0.75rem;color:#8a6090;margin-bottom:4px;font-weight:700;">JARAK</div>
+            <div style="position:relative;height:4px;background:linear-gradient(90deg,var(--pink),var(--lavender));border-radius:10px;margin:8px 0;">
+              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.4rem;">✈️</span>
+            </div>
+            <div style="font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--deep-pink);font-weight:700;">~2.100 km</div>
+            <div style="font-size:0.72rem;color:#8a6090;">Solo → Lhokseumawe</div>
+          </div>
+
+          <!-- Aku - Lhokseumawe -->
+          <div style="background:white;border-radius:20px;padding:18px 24px;box-shadow:0 6px 20px rgba(201,184,245,0.35);text-align:center;min-width:130px;">
+            <div style="font-size:2.2rem;">👦</div>
+            <div style="font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--soft-purple);font-weight:700;">Aku</div>
+            <div style="font-size:0.85rem;font-weight:700;color:#6a4070;margin-top:4px;">📍 Lhokseumawe</div>
+            <div style="font-size:0.75rem;color:#8a6090;">Aceh</div>
+          </div>
+        </div>
+
+        <p style="font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--deep-pink);">
+          "2.100 km tidak ada artinya dibanding cintaku padamu" 💕
+        </p>
+
+        <div style="margin-top:16px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <div style="background:white;border-radius:12px;padding:12px 20px;box-shadow:0 4px 15px rgba(255,133,161,0.2);">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--pink);">∞</div>
+            <div style="font-size:0.8rem;color:#8a6090;">Rasa Rindu</div>
+          </div>
+          <div style="background:white;border-radius:12px;padding:12px 20px;box-shadow:0 4px 15px rgba(255,133,161,0.2);">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--pink);">💯</div>
+            <div style="font-size:0.8rem;color:#8a6090;">% Setia</div>
+          </div>
+          <div style="background:white;border-radius:12px;padding:12px 20px;box-shadow:0 4px 15px rgba(255,133,161,0.2);">
+            <div style="font-family:'Dancing Script',cursive;font-size:2rem;color:var(--pink);">💪</div>
+            <div style="font-size:0.8rem;color:#8a6090;">Kekuatan Kita</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💡 Tips LDR Kita</h2>
+      <div class="ldr-tip"><div class="tip-icon">🌙</div><div><strong>Goodnight Call</strong><p>Kita selalu usahakan telepon sebelum tidur, karena suara kamu adalah pengantar tidur terbaikku.</p></div></div>
+      <div class="ldr-tip"><div class="tip-icon">📦</div><div><strong>Kirim Surprise</strong><p>Kiriman kecil yang tidak terduga bisa membuat jarak terasa lebih dekat dan hati lebih hangat.</p></div></div>
+      <div class="ldr-tip"><div class="tip-icon">💌</div><div><strong>Pesan Voicenote</strong><p>Karena mendengar suara kamu lebih dari sekedar membaca teks. Suaramu adalah rumahku.</p></div></div>
+    </div>
+
+    <div class="card">
+      <div style="background:linear-gradient(135deg,var(--pink),var(--lavender));border-radius:20px;padding:28px;color:white;text-align:center;">
+        <h3 style="color:white;font-size:1.6rem;">🗓️ Impian Kita</h3>
+        <p style="font-family:'Dancing Script',cursive;font-size:1.3rem;margin-top:12px;">
+          Hari di mana jarak tidak lagi ada antara kita... hari itu yang kita tunggu bersama. Setiap rindu yang kita tahan hari ini adalah investasi untuk kebahagiaan kita nanti. 🏡💕
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== MUSIC PAGE ======== -->
+<div class="page" id="page-music">
+  <div class="container">
+    <h1>🎵 Playlist Cinta Kita</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">Lagu-lagu yang selalu mengingatkanku padamu 🎶</p>
+
+    <div class="card">
+      <h2>🎤 Lagu LDR Terbaik</h2>
+      <ul class="playlist">
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">A Thousand Miles</div>
+            <div class="song-artist">Vanessa Carlton</div>
+          </div>
+          <span class="song-mood">Klasik</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">I Will Wait</div>
+            <div class="song-artist">Mumford & Sons</div>
+          </div>
+          <span class="song-mood">Setia</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">Lucky</div>
+            <div class="song-artist">Jason Mraz & Colbie Caillat</div>
+          </div>
+          <span class="song-mood">Manis</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">Far Away</div>
+            <div class="song-artist">Nickelback</div>
+          </div>
+          <span class="song-mood">Rindu</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">Thinking Out Loud</div>
+            <div class="song-artist">Ed Sheeran</div>
+          </div>
+          <span class="song-mood">Romantis</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">Tanpa Batas Waktu</div>
+            <div class="song-artist">Ade Govinda ft. Fadly</div>
+          </div>
+          <span class="song-mood">Indonesia</span>
+        </li>
+        <li class="song-item" onclick="playNote(this)">
+          <span class="song-icon">🎵</span>
+          <div class="song-info">
+            <div class="song-title">Hati-Hati di Jalan</div>
+            <div class="song-artist">Tulus</div>
+          </div>
+          <span class="song-mood">Sayang</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div style="text-align:center;">
+        <h2>🎂 Lagu Ulang Tahun Spesial</h2>
+        <p style="font-family:'Dancing Script',cursive;font-size:1.4rem;color:var(--deep-pink);margin:16px 0;">
+          ♪ Happy Birthday to you ♪<br>
+          ♪ Happy Birthday to you ♪<br>
+          ♪ Happy Birthday, sayangku ♪<br>
+          ♪ Happy Birthday to you! ♪
+        </p>
+        <button class="btn" onclick="launchFireworks()">🎆 Tiup Lilin!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== GIFT PAGE ======== -->
+<div class="page" id="page-gift">
+  <div class="container">
+    <h1>🎁 Hadiah Untukmu</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">Klik kado untuk membuka! ✨</p>
+
+    <div class="card gift-wrap">
+      <div class="gift-box" onclick="openGift()" id="gift-emoji">🎁</div>
+      <p style="margin-top:10px;color:#8a6090;">← Klik untuk buka hadiah!</p>
+      <div class="gift-msg" id="gift-msg">
+        <div class="wish-bubble">
+          🎉 Yeay! Kamu buka hadiahnya! 🎉<br><br>
+          Hadiah terbesarku untukmu adalah... hatiku. Sepenuhnya, seutuhnya, selamanya. Tidak ada yang bisa aku berikan yang lebih berharga dari itu. 💖
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;">
+          <div class="card" style="margin:0;text-align:center;background:linear-gradient(135deg,rgba(255,194,209,0.4),rgba(201,184,245,0.4));">
+            <div style="font-size:2.5rem;">⭐</div>
+            <strong>Cinta Tak Terbatas</strong>
+            <p style="font-size:0.85rem;margin-top:4px;">Dari kini sampai selamanya</p>
+          </div>
+          <div class="card" style="margin:0;text-align:center;background:linear-gradient(135deg,rgba(255,215,0,0.2),rgba(255,194,209,0.4));">
+            <div style="font-size:2.5rem;">🌹</div>
+            <strong>Ribuan Rindu</strong>
+            <p style="font-size:0.85rem;margin-top:4px;">Yang selalu memelukmu dari jauh</p>
+          </div>
+          <div class="card" style="margin:0;text-align:center;background:linear-gradient(135deg,rgba(201,184,245,0.4),rgba(255,194,209,0.4));">
+            <div style="font-size:2.5rem;">🏡</div>
+            <strong>Impian Kita</strong>
+            <p style="font-size:0.85rem;margin-top:4px;">Rumah kecil yang hangat, bersama</p>
+          </div>
+          <div class="card" style="margin:0;text-align:center;background:linear-gradient(135deg,rgba(255,194,209,0.4),rgba(255,215,0,0.2));">
+            <div style="font-size:2.5rem;">💫</div>
+            <strong>Masa Depan Indah</strong>
+            <p style="font-size:0.85rem;margin-top:4px;">Yang kita bangun berdua</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <h2>🎂 Doa Ultah Untukmu</h2>
+      <p style="font-family:'Dancing Script',cursive;font-size:1.2rem;color:#5a3060;line-height:2;">
+        Semoga di usiamu yang bertambah ini,<br>
+        kamu semakin bahagia, semakin sehat,<br>
+        semakin cantik (kalau itu mungkin 😄),<br>
+        dan semoga semua impianmu terwujud.<br>
+        Dan semoga... salah satu impian itu adalah aku. 🙈💕
+      </p>
+      <button class="btn" onclick="launchFireworks()" style="margin-top:16px;">🎆 Kembang Api!</button>
+    </div>
+  </div>
+</div>
+
+<!-- ======== PROMISE PAGE ======== -->
+<div class="page" id="page-promise">
+  <div class="container">
+    <h1>🌙 Janjiku Padamu</h1>
+    <p style="text-align:center;margin:10px 0 20px;color:#8a6090;">Setiap kata adalah sumpah, setiap sumpah adalah hidupku 🕊️</p>
+
+    <div class="promise-card">
+      <div class="promise-icon">💪</div>
+      <h3>Aku Berjanji Akan Kuat</h3>
+      <p>Aku berjanji untuk tidak menyerah pada LDR ini. Setiap jarak, setiap rindu, setiap malam yang terasa panjang — aku akan hadapi dengan keyakinan bahwa kamu layak untuk aku perjuangkan.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">📞</div>
+      <h3>Aku Berjanji Selalu Ada</h3>
+      <p>Meski tidak bisa hadir secara fisik, aku berjanji untuk selalu ada untukmu. Saat kamu sedih, saat kamu senang, saat kamu butuh seseorang untuk diajak bicara — aku selalu di sini.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">❤️</div>
+      <h3>Aku Berjanji Setia</h3>
+      <p>Hatiku hanya ada untuk kamu. Jarak tidak akan mengubah itu. Aku berjanji untuk selalu memilihmu, setiap hari, dalam setiap keadaan.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">🏡</div>
+      <h3>Aku Berjanji Berjuang</h3>
+      <p>Aku berjanji untuk terus berjuang untuk masa depan kita. Untuk hari di mana tidak ada lagi jarak yang memisahkan kita. Aku akan bekerja keras untuk itu.</p>
+    </div>
+    <div class="promise-card">
+      <div class="promise-icon">🌟</div>
+      <h3>Aku Berjanji Mencintaimu Selamanya</h3>
+      <p>Ini janji yang paling penting. Cintaku padamu bukan karena jarak dekat. Cintaku padamu karena kamu — dan itu tidak akan pernah berubah.</p>
+    </div>
+
+    <div class="card">
+      <div style="background:linear-gradient(135deg,var(--pink),var(--soft-purple));border-radius:20px;padding:28px;color:white;text-align:center;">
+        <p style="font-family:'Dancing Script',cursive;font-size:1.6rem;line-height:1.8;">
+          "Jarak hanya membuktikan bahwa cinta bisa melampaui segala batas. Dan cinta kita sudah membuktikannya setiap hari." 🌍💕
+        </p>
+        <button class="btn" style="background:white;color:var(--deep-pink);margin-top:20px;" onclick="launchFireworks()">
+          🎆 Rayakan Cinta Kita!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- STARS ----
+const starsContainer = document.getElementById('stars');
+for(let i=0;i<60;i++){
+  const s = document.createElement('div');
+  s.classList.add('star');
+  const size = Math.random()*4+2;
+  s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*3}s;animation-duration:${2+Math.random()*3}s;`;
+  starsContainer.appendChild(s);
+}
+
+// ---- FLOATING HEARTS ----
+const heartsContainer = document.getElementById('hearts');
+const heartEmojis = ['💕','💗','💖','💓','💞','💝','🌸','✨'];
+function createHeart(){
+  const h = document.createElement('div');
+  h.classList.add('floating-heart');
+  h.textContent = heartEmojis[Math.floor(Math.random()*heartEmojis.length)];
+  h.style.left = Math.random()*100+'%';
+  h.style.animationDuration = (6+Math.random()*8)+'s';
+  h.style.animationDelay = Math.random()*2+'s';
+  h.style.fontSize = (0.8+Math.random()*1.2)+'rem';
+  heartsContainer.appendChild(h);
+  setTimeout(()=>h.remove(), 12000);
+}
+setInterval(createHeart, 1500);
+
+// ---- NAVIGATION ----
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.getElementById('btn-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ---- TANGGAL LAHIR ----
+// Lahir 27 Februari 2007 → pada 27 Feb 2026 berumur 19 tahun
+const BIRTH_YEAR  = 2007;
+const BIRTH_MONTH = 2;   // Februari (1-based)
+const BIRTH_DAY   = 27;
+
+// Ambil tanggal WIB (UTC+7) agar konsisten untuk pengguna Indonesia
+function nowWIB() {
+  const now = new Date();
+  // Offset WIB = UTC+7 = 7*60 menit
+  const wibOffset = 7 * 60;
+  const localOffset = now.getTimezoneOffset(); // menit, negatif jika UTC+
+  const diffMs = (wibOffset + localOffset) * 60 * 1000;
+  return new Date(now.getTime() + diffMs);
+}
+
+function calcAge(d) {
+  let age = d.getFullYear() - BIRTH_YEAR;
+  const passed = d.getMonth() + 1 > BIRTH_MONTH ||
+    (d.getMonth() + 1 === BIRTH_MONTH && d.getDate() >= BIRTH_DAY);
+  if (!passed) age--;
+  return age;
+}
+
+function updateAgeCard() {
+  const now = nowWIB();
+  const age = calcAge(now);
+  const prevAge = age - 1;
+
+  // Gunakan tahun/bulan/hari WIB untuk perbandingan (hindari masalah offset)
+  const y = now.getFullYear(), m = now.getMonth() + 1, d = now.getDate();
+
+  // Tepat ulang tahun hari ini?
+  const isBirthday = (m === BIRTH_MONTH && d === BIRTH_DAY);
+
+  // Tentukan ulang tahun terakhir & berikutnya (pakai angka hari saja)
+  const bdThisYear  = y * 10000 + BIRTH_MONTH * 100 + BIRTH_DAY;
+  const todayNum    = y * 10000 + m * 100 + d;
+  const lastBdYear  = todayNum >= bdThisYear ? y : y - 1;
+  const nextBdYear  = lastBdYear + 1;
+
+  // Pakai Date hanya untuk selisih ms, set jam 0 agar simetris
+  const lastBd = new Date(lastBdYear, BIRTH_MONTH - 1, BIRTH_DAY, 0, 0, 0);
+  const nextBd = new Date(nextBdYear, BIRTH_MONTH - 1, BIRTH_DAY, 0, 0, 0);
+  const nowDay = new Date(y, m - 1, d, 0, 0, 0); // awal hari ini
+
+  const yearMs   = nextBd - lastBd;
+  const doneMs   = nowDay - lastBd;
+  // Kalau tepat ulang tahun → 100%, kalau sebelum → hitung normal
+  const progress = isBirthday ? 1 : Math.min(Math.max(doneMs / yearMs, 0), 1);
+  const daysDone  = isBirthday ? Math.floor(yearMs / 86400000) : Math.floor(doneMs / 86400000);
+  const daysTotal = Math.floor(yearMs / 86400000);
+
+  // Sisa waktu hari ini (WIB)
+  const endOfDay = new Date(y, m - 1, d, 23, 59, 59);
+  const sisaMs   = endOfDay - nowDay;
+  const sisaJam  = Math.floor(sisaMs / 3600000);
+  const sisaMnt  = Math.floor((sisaMs % 3600000) / 60000);
+
+  // Update elemen
+  document.getElementById('age-journey-title').textContent = `🎂 Perjalanan ${prevAge} → ${age} Tahun`;
+  document.getElementById('age-now-text').textContent      = `${age} tahun`;
+  document.getElementById('age-prev-label').textContent    = `${prevAge} 🌱`;
+  document.getElementById('age-next-label').textContent    = `${age} 🌸`;
+  document.getElementById('age-display').textContent       = `${age} 🎉`;
+
+  document.getElementById('stat-days').textContent  = daysDone.toLocaleString('id-ID');
+  document.getElementById('stat-hours').textContent = (daysDone * 24).toLocaleString('id-ID');
+
+  const pct = Math.round(progress * 100);
+  setTimeout(() => {
+    const bar = document.getElementById('progress-bar');
+    const txt = document.getElementById('progress-text');
+    if (bar) bar.style.width = pct + '%';
+    if (txt) txt.textContent = pct + '% 🎉';
+
+    const status = document.getElementById('progress-status');
+    if (status) {
+      if (isBirthday) {
+        status.textContent = `✅ ${daysTotal}/${daysTotal} hari — Selamat Ulang Tahun ke-${age}! 🥳`;
+      } else {
+        status.textContent = `🌸 ${daysDone}/${daysTotal} hari dilalui tahun ini`;
+      }
+    }
+  }, 400);
+}
+
+updateAgeCard();
+
+// ---- COUNTDOWN ULANG TAHUN 27 FEBRUARI ----
+function updateCountdown(){
+  const now = nowWIB();
+  const y = now.getFullYear(), mo = now.getMonth()+1, d = now.getDate();
+  const isBirthday = (mo === BIRTH_MONTH && d === BIRTH_DAY);
+
+  const title  = document.getElementById('cd-title');
+  const desc   = document.getElementById('cd-desc');
+  const badge  = document.getElementById('cd-badge');
+  const boxDays = document.getElementById('cd-box-days');
+
+  let diff, h, m, s, days;
+
+  if(isBirthday){
+    // Hari ini ulang tahun → hitung mundur sisa waktu sampai tengah malam
+    const end = new Date(y, mo-1, d, 23, 59, 59);
+    diff = end - now;
+    h    = Math.floor(diff/3600000);
+    m    = Math.floor((diff%3600000)/60000);
+    s    = Math.floor((diff%60000)/1000);
+    days = 0;
+    if(title)  title.textContent  = '🎂 Sisa Hari Spesialmu!';
+    if(desc)   desc.textContent   = 'Rayakan terus sampai tengah malam, sayangku! 🥳🎉';
+    if(badge)  badge.textContent  = '🎉 Hari ini ulang tahunmu ke-' + calcAge(now) + '!';
+    if(boxDays) boxDays.style.display = 'none';
+  } else {
+    // Bukan hari ini → hitung mundur menuju 27 Februari berikutnya
+    let nextBd = new Date(y, BIRTH_MONTH-1, BIRTH_DAY, 0, 0, 0);
+    if(nextBd <= now) nextBd = new Date(y+1, BIRTH_MONTH-1, BIRTH_DAY, 0, 0, 0);
+    diff = nextBd - now;
+    days = Math.floor(diff/86400000);
+    h    = Math.floor((diff%86400000)/3600000);
+    m    = Math.floor((diff%3600000)/60000);
+    s    = Math.floor((diff%60000)/1000);
+    const nextAge = calcAge(now) + 1;
+    if(title)  title.textContent  = '⏳ Menuju Ulang Tahun ke-' + nextAge + '!';
+    if(desc)   desc.textContent   = 'Countdown ke 27 Februari — aku sudah tidak sabar! 💕';
+    if(badge)  badge.textContent  = '📅 27 Februari ' + nextBd.getFullYear() + ' — kamu akan jadi ' + nextAge + ' tahun!';
+    if(boxDays) boxDays.style.display = '';
+    document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+  }
+
+  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-min').textContent   = String(m).padStart(2,'0');
+  document.getElementById('cd-sec').textContent   = String(s).padStart(2,'0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// ---- QUOTE CAROUSEL ----
+const quotes = [
+  '"Jarak hanya angka, tapi rasa sayangku tidak pernah bisa diukur jarak..."',
+  '"Rindu itu menyakitkan, tapi rindu padamu adalah rasa sakit yang paling indah..."',
+  '"Setiap kali aku melihat bintang, aku tahu kamu melihat langit yang sama..."',
+  '"LDR mengajarkan kita bahwa cinta sejati tidak butuh kehadiran fisik untuk terasa nyata..."',
+  '"Kamu jauh dari mataku, tapi selalu dekat di hatiku, setiap detik..."',
+  '"Tunggu aku. Aku sedang dalam perjalanan menuju hidupmu sepenuhnya..."'
+];
+let currentQuote = 0;
+const quoteText = document.getElementById('quote-text');
+const quoteNav = document.getElementById('quote-nav');
+
+quotes.forEach((q,i) => {
+  const dot = document.createElement('button');
+  dot.classList.add('quote-dot');
+  if(i===0) dot.classList.add('active');
+  dot.onclick = ()=>setQuote(i);
+  quoteNav.appendChild(dot);
+});
+
+function setQuote(i){
+  currentQuote = i;
+  quoteText.style.opacity='0';
+  setTimeout(()=>{
+    quoteText.textContent = quotes[i];
+    quoteText.style.opacity='1';
+    quoteText.style.transition='opacity 0.5s';
+  },300);
+  document.querySelectorAll('.quote-dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+}
+setInterval(()=>setQuote((currentQuote+1)%quotes.length), 5000);
+
+// ---- FIREWORKS ----
+function launchFireworks(){
+  const emojis=['🎆','🎇','✨','🌟','💥','🎉','🎊','💫'];
+  for(let i=0;i<20;i++){
+    setTimeout(()=>{
+      const f = document.createElement('div');
+      f.classList.add('firework');
+      f.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+      f.style.left = Math.random()*90+'vw';
+      f.style.top = Math.random()*80+'vh';
+      f.style.animationDuration = (0.5+Math.random()*0.8)+'s';
+      document.body.appendChild(f);
+      setTimeout(()=>f.remove(), 1200);
+    }, i*80);
+  }
+}
+
+// ---- MEMORIES ----
+const memoryData = [
+  {title:'💬 Pesan Pertama', text:'Masih ingat betapa canggungnya aku saat pertama kali chat kamu? Entah kenapa, dari pertama reply kamu sudah membuat jantungku berdegup lebih cepat. Ternyata itu adalah awal dari cerita paling indah hidupku.'},
+  {title:'📞 Video Call Pertama', text:'Video call pertama... kita berdua senyum-senyum sendiri, tidak tahu harus ngomong apa. Tapi justru itu yang paling lucu dan manis. Wajahmu di layar sudah cukup untuk membuat hariku sempurna.'},
+  {title:'🌙 Begadang Bareng', text:'Ngobrol dari malam sampai subuh, lupa waktu karena satu sama lain terlalu seru untuk dibicarakan. Obrolan-obrolan itu adalah kenangan yang paling aku jaga di hati.'},
+  {title:'🎵 Lagu Kita', text:'Saat kamu share lagu dan bilang "ini mengingatkanku padamu" — itu adalah momen pertama aku tahu kamu juga memikirkan aku. Lagu itu sekarang jadi soundtrack cinta kita.'},
+  {title:'😭 Pertama Kali Kangen', text:'Nonton film bareng online sambil video call, dan di bagian yang sedih kita sama-sama nangis — padahal berusaha pura-pura kuat. Sejak saat itu aku tahu, perasaan ini sungguhan.'},
+  {title:'💌 Surat Virtual', text:'Pesan panjang yang kamu kirim di tengah malam, berisi hal-hal yang tidak berani kamu bilang langsung. Aku membacanya berkali-kali. Sampai sekarang aku masih simpan screenshot-nya.'},
+  {title:'🌅 Sunrise Bareng', text:'Video call pagi-pagi, kita nonton sunrise "bersama" — kamu dari tempatmu, aku dari tempatku. Langit yang sama, hati yang sama. Momen itu terasa ajaib.'},
+  {title:'💖 "I Love You"', text:'Saat kamu pertama kali bilang tiga kata itu... waktu terasa berhenti. Aku membacanya berkali-kali untuk memastikan itu nyata. Dan saat aku yakin, senyumku tidak bisa berhenti sepanjang hari.'}
+];
+
+function showMemory(i){
+  const detail = document.getElementById('memory-detail');
+  document.getElementById('memory-content').innerHTML = `<h2>${memoryData[i].title}</h2><p style="font-family:'Dancing Script',cursive;font-size:1.15rem;line-height:2;color:#5a3060;">${memoryData[i].text}</p>`;
+  detail.style.display='block';
+  detail.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+// ---- GIFT ----
+let giftOpened = false;
+function openGift(){
+  if(!giftOpened){
+    giftOpened=true;
+    document.getElementById('gift-emoji').textContent='🎊';
+    document.getElementById('gift-msg').classList.add('show');
+    launchFireworks();
+  }
+}
+
+// ---- MUSIC NOTES ----
+function playNote(el){
+  const notes=['🎵','🎶','♪','♫'];
+  const rect = el.getBoundingClientRect();
+  for(let i=0;i<5;i++){
+    setTimeout(()=>{
+      const n = document.createElement('div');
+      n.classList.add('music-float');
+      n.textContent = notes[Math.floor(Math.random()*notes.length)];
+      n.style.left = (rect.left + Math.random()*rect.width)+'px';
+      n.style.top = rect.top+'px';
+      n.style.setProperty('--dx', (Math.random()*80-40)+'px');
+      n.style.setProperty('--rot', (Math.random()*60-30)+'deg');
+      document.body.appendChild(n);
+      setTimeout(()=>n.remove(), 4500);
+    }, i*100);
+  }
+  el.style.background='rgba(255,133,161,0.25)';
+  setTimeout(()=>el.style.background='rgba(255,194,209,0.2)', 800);
+}
+</script>
+</body>
+</html>
